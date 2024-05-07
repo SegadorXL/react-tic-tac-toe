@@ -1,6 +1,7 @@
 import Player from "./components/Player.jsx";
 import GameBoard from "./components/GameBoard.jsx";
 import {useState} from "react";
+import Log from "./components/Log.jsx";
 
 function App() {
     const [activePlayer, setActivePlayer] = useState('X');
@@ -29,7 +30,7 @@ function App() {
             </ol>
             <GameBoard onSelectSquare={handleSquareSelected} turns={gameTurns}/>
         </div>
-        LOG
+        <Log turns={gameTurns}/>
     </main>)
 }
 
